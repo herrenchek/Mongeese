@@ -46,7 +46,7 @@ app.get("/scrape", function(req, res) {
       var result = {};
 
       // Add the text and href of every link, and save them as properties of the result object
-      result.title = $(this).text();
+      result.title = $(this).find("h3").text();
       result.link = $(this).find("a").attr("href");
       result.summary = $(this).find("p.gs-c-promo-summary").text();
       
